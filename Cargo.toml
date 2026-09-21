@@ -1,0 +1,71 @@
+[package]
+name = "querypath-snapshot"
+version = "1.0.0"
+authors = ["Jan Roman Cisowski <code@cisowscy.com>"]
+description = "Automated Markdown code snapshot and documentation generator for querypath scanning results."
+repository = "https://github.com/j-Cis/querypath-snapshot"
+readme = "README.md"
+keywords = [
+    "snapshot",
+    "documentation",
+    "markdown",
+    "querypath",
+    "code-generator",
+]
+categories = [
+    "development-tools",
+    "text-processing",
+    "filesystem",
+]
+license = "Unlicense OR MIT"
+edition = "2024"
+rust-version = "1.96.0"
+resolver = "3"
+
+include = [
+    "src/**/*",
+    "examples/**/*",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE*",
+]
+
+[package.metadata.cargo]
+edition = "2024"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+targets = [
+    "x86_64-pc-windows-msvc",
+    "i686-pc-windows-msvc",
+    "x86_64-unknown-linux-gnu",
+    "x86_64-unknown-linux-musl",
+    "i686-unknown-linux-gnu",
+    "x86_64-apple-darwin",
+    "aarch64-apple-darwin"
+]
+
+[lib]
+name = "querypath_snapshot"
+path = "src/lib.rs"
+
+[badges]
+travis-ci = { repository = "j-Cis/querypath-snapshot" }
+appveyor = { repository = "j-Cis/querypath-snapshot" }
+
+[dependencies]
+anyhow = "1.0.104"
+querypath = "1.0.0"
+querypath-fmt = "1.0.0"
+temporal-fmt = "0.1.1"
+
+# =========================
+# 🛑 GLOBAL LINTS
+# =========================
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+bool_comparison = "allow"
