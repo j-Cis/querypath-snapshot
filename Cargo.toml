@@ -1,6 +1,6 @@
 [package]
 name = "querypath-snapshot"
-version = "1.0.0"
+version = "1.1.0"
 authors = ["Jan Roman Cisowski <code@cisowscy.com>"]
 description = "Automated Markdown code snapshot and documentation generator for querypath scanning results."
 repository = "https://github.com/j-Cis/querypath-snapshot"
@@ -57,7 +57,7 @@ appveyor = { repository = "j-Cis/querypath-snapshot" }
 [dependencies]
 anyhow = "1.0.104"
 querypath = "1.0.0"
-querypath-fmt = "1.0.0"
+querypath-fmt = "1.1.0"
 temporal-fmt = "0.1.1"
 
 # =========================
